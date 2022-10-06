@@ -146,7 +146,7 @@ router.post("/tmp/password", (req, res) => {
 
     const newPwPage =
       process.env.NODE_ENV === "production"
-        ? ""
+        ? `https://react-bbs-server.herokuapp.com/tmp/password/${userInfo._id}`
         : `http://localhost:3000/tmp/password/${userInfo._id}`;
 
     mailSender.sendGmail({
