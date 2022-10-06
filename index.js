@@ -32,7 +32,7 @@ app.use("/api/writing", require("./routes/writing"));
 app.use("/api/comment", require("./routes/comment"));
 app.use("/api/like", require("./routes/LikeAndDislike"));
 
-const port = 5000 || process.env.PORT;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log("server listening on 5000 port..");
